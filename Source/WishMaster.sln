@@ -3,13 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deployment", "Deployment\Deployment.csproj", "{02B67FA9-168B-465F-B0EA-9981D1228049}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{49A5E8CC-2F72-41AF-AE25-915D26391984}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{4406CF79-9484-40C7-BF09-CDE48BF135C3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{55206323-90F4-4199-9BF2-4DE88220F8C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{0D2C0DCF-4B55-4C1A-A9BF-B28669BB286D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.Deployment", "Wish.Deployment\Wish.Deployment.csproj", "{02B67FA9-168B-465F-B0EA-9981D1228049}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{1D586640-66BB-42BF-B196-247B89E2B17A}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Wish.Web", "Wish.Web\Wish.Web.xproj", "{CD1A536D-F30B-41D5-A03F-2FD594063090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.ApplicationSurface", "Wish.ApplicationSurface\Wish.ApplicationSurface.csproj", "{262F305B-E754-423E-AF7E-A864017BD5F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{088DC13A-A4D5-47CF-A691-EDCADB8A856B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.IntegrationTests", "Wish.IntegrationTests\Wish.IntegrationTests.csproj", "{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.UnitTests", "Wish.UnitTests\Wish.UnitTests.csproj", "{94900FAC-46E2-42CF-88FA-5D57A3777511}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +35,29 @@ Global
 		{02B67FA9-168B-465F-B0EA-9981D1228049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02B67FA9-168B-465F-B0EA-9981D1228049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02B67FA9-168B-465F-B0EA-9981D1228049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1A536D-F30B-41D5-A03F-2FD594063090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1A536D-F30B-41D5-A03F-2FD594063090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1A536D-F30B-41D5-A03F-2FD594063090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1A536D-F30B-41D5-A03F-2FD594063090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262F305B-E754-423E-AF7E-A864017BD5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262F305B-E754-423E-AF7E-A864017BD5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262F305B-E754-423E-AF7E-A864017BD5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262F305B-E754-423E-AF7E-A864017BD5F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02B67FA9-168B-465F-B0EA-9981D1228049} = {55206323-90F4-4199-9BF2-4DE88220F8C1}
+		{2F1BBAEC-5FA4-4DE3-98EE-06974CAE715B} = {088DC13A-A4D5-47CF-A691-EDCADB8A856B}
+		{94900FAC-46E2-42CF-88FA-5D57A3777511} = {088DC13A-A4D5-47CF-A691-EDCADB8A856B}
 	EndGlobalSection
 EndGlobal

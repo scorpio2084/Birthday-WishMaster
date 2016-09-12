@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "exports": {
+    "Wish.ApplicationSurface/1.0.0": {
+      "type": "project",
+      "framework": ".NETFramework,Version=v4.5.2",
+      "compile": {
+        "bin/Debug/Wish.ApplicationSurface.dll": {}
+      },
+      "runtime": {
+        "../packages/Autofac.4.1.0/lib/net45/Autofac.dll": {},
+        "bin/Debug/Wish.ApplicationSurface.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/Wish.ApplicationSurface.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
