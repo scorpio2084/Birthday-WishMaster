@@ -1948,6 +1948,9 @@
       },
       "Wish.ApplicationSurface/1.0.0": {
         "type": "project"
+      },
+      "Wish.Common/1.0.0": {
+        "type": "project"
       }
     }
   },
@@ -5705,6 +5708,10 @@
     "Wish.ApplicationSurface/1.0.0": {
       "type": "project",
       "msbuildProject": "../Wish.ApplicationSurface/Wish.ApplicationSurface.csproj"
+    },
+    "Wish.Common/1.0.0": {
+      "type": "project",
+      "msbuildProject": "../Wish.Common/Wish.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5726,7 +5733,8 @@
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0"
     ],
     ".NETFramework,Version=v4.5.2": [
-      "Wish.ApplicationSurface"
+      "Wish.ApplicationSurface",
+      "Wish.Common"
     ]
   },
   "tools": {

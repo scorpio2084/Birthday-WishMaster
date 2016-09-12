@@ -92,7 +92,22 @@ Migrator: $migrateExePath
 
 task ConnectionString {
 	write-host "Using connection string: $connection_string"
-	poke-xml "$web_dir\web.config" "/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" $connection_string
+	
+	$j = Get-Content -Raw -Path "$web_dir\appsettings.json" | ConvertFrom-Json	
+	$j.ConnectionStrings.DefaultConnection = $connection_string
+	
+	($j -split '\r\n' |
+	% {
+	  $line = $_
+	  if ($_ -match '^ +') {
+		$len  = $Matches[0].Length / 2
+		$line = ' ' * $len + $line.TrimStart()
+	  }
+	  $line
+	}) -join "`r`n"
+	
+	$j | ConvertTo-Json | Set-Content -Path "$web_dir\appsettings.json"
+	
 	poke-xml "$data_load_dir\App.config" "/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" $connection_string
 	poke-xml "$integration_test_dir\App.config" "/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" $connection_string
 }

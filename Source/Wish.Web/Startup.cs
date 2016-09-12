@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyModel;
 using Microsoft.Extensions.Logging;
+using Wish.Web.Infrastructure;
 
 namespace Wish.Web
 {
@@ -71,11 +72,13 @@ namespace Wish.Web
             appLifetime.ApplicationStopped.Register(() => ApplicationContainer.Dispose());
         }
 
-        private static IContainer CreateApplicationContainer(IServiceCollection services)
+        private IContainer CreateApplicationContainer(IServiceCollection services)
         {
             var builder = new ContainerBuilder();
 
             RegisterReferencedAssemblies(builder);
+
+            builder.Register(c => new WebDatabaseConfiguration(Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Populate(services);
 

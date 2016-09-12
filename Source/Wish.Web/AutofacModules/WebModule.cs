@@ -2,7 +2,7 @@
 
 namespace Wish.Web.AutofacModules
 {
-    public class WebModule : Module
+    internal class WebModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {

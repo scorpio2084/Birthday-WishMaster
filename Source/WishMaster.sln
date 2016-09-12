@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.IntegrationTests", "Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.UnitTests", "Wish.UnitTests\Wish.UnitTests.csproj", "{94900FAC-46E2-42CF-88FA-5D57A3777511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wish.Common", "Wish.Common\Wish.Common.csproj", "{14D71934-F7D2-4760-AF23-7C2F37890E91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{5D06668A-15AD-4B6E-9D60-0D9725581C6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94900FAC-46E2-42CF-88FA-5D57A3777511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D71934-F7D2-4760-AF23-7C2F37890E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D71934-F7D2-4760-AF23-7C2F37890E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D71934-F7D2-4760-AF23-7C2F37890E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D71934-F7D2-4760-AF23-7C2F37890E91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

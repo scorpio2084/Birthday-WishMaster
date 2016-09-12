@@ -31,6 +31,9 @@
       "dependencies": {
         "Wish.ApplicationSurface": {
           "target": "project"
+        },
+        "Wish.Common": {
+          "target": "project"
         }
       }
     }
