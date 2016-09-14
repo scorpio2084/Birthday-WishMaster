@@ -191,13 +191,8 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
-# Vantage artifacts
-build output/
-Source/.nuget/NuGet.exe
-
 # VSCode settings
 .settings/
 # _references.js gets created somewhat automatically.
 _references.js
-/Source/Vantage.Common/Models/UserModel.cs
 /README.md
